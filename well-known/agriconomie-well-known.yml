@@ -1,0 +1,61 @@
+generated: '2026-08-06'
+method: probed
+source: live probes of every Agryco / Agriconomie host reachable from apis.yml
+note: >-
+  No .well-known document was found on any host. Every path below returned an honest
+  404 from the origin (nginx on api.agriconomie.com, the storefront on www.agryco.com)
+  — not a soft-404 catch-all, so these are real misses rather than an SPA answering 200
+  for everything. Nothing is indexed and no WellKnown / SecurityTxt pointer is wired in
+  apis.yml, because there is nothing there to point at.
+hosts:
+- host: https://www.agryco.com
+  role: storefront / primary website (www.agriconomie.com 301s here)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+- host: https://api.agriconomie.com
+  role: >-
+    live private API host (CNAME admin.agriconomie.com); nginx answers but exposes
+    nothing anonymously
+  documents:
+  - path: /
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /v1/openapi.json
+    status: 404
+  - path: /api-docs
+    status: 404
+  - path: /docs
+    status: 404
+  - path: /graphql
+    status: 404
+documents: []

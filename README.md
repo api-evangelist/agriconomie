@@ -42,5 +42,36 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Agriconomie is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Agryco — trading as **Agriconomie** until its September 2024 rebrand — is a French online
+marketplace and e-commerce platform selling agricultural supplies direct to farmers:
+fertilizers, seeds, phytosanitary products, animal nutrition and livestock equipment, plus
+tractor, spraying, harvesting and soil-working spare parts. Founded in 2014 by Clément Le
+Fournis, Dinh Nguyen and Paolin Pascot, it serves professional farmers across France,
+Belgium, Germany, Spain and Italy, and raised a €60M Series B in 2022.
+
+## API surface
+
+**None found.** Agryco is an end-user commerce product with no public developer program.
+A full contract-discovery pass on 2026-08-06 came back empty:
+
+| Probe | Result |
+|---|---|
+| `https://api.agriconomie.com/openapi.json` (and `/swagger.json`, `/v1/openapi.json`, `/api-docs`, `/docs`) | 404 |
+| `https://api.agriconomie.com/graphql` | 404 |
+| `https://www.agryco.com/openapi.json` | 404 |
+| `https://www.agryco.com/llms.txt` | 404 |
+| `/.well-known/agent-card.json` and `/.well-known/agent.json` (both hosts) | 404 |
+| `/.well-known/security.txt`, `/openid-configuration`, `/oauth-authorization-server`, `/api-catalog`, `/ai-plugin.json` | 404 |
+| `https://www.agryco.com/robots.txt` | 200 — `Disallow: /api` (storefront-internal only) |
+
+`api.agriconomie.com` is a live nginx origin (CNAME `admin.agriconomie.com`) but is closed:
+it answers an honest 404 on every anonymous path, so these are real misses rather than an
+SPA catch-all. See `x-coverage` in `apis.yml`.
+
+## Links
+
+- Website — https://www.agryco.com/
+- Blog (Agrycomag) — https://www.agryco.com/blog
+- Support — https://www.agryco.com/contact
+- Terms of sale — https://www.agryco.com/publi/conditions-generales-vente
+- Privacy policy — https://www.agryco.com/publi/politique-de-confidentialite
