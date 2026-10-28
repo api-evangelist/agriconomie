@@ -1,4 +1,4 @@
-# Agriconomie
+# Agryco
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,36 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Agryco — trading as **Agriconomie** until its September 2024 rebrand — is a French online
-marketplace and e-commerce platform selling agricultural supplies direct to farmers:
-fertilizers, seeds, phytosanitary products, animal nutrition and livestock equipment, plus
-tractor, spraying, harvesting and soil-working spare parts. Founded in 2014 by Clément Le
-Fournis, Dinh Nguyen and Paolin Pascot, it serves professional farmers across France,
-Belgium, Germany, Spain and Italy, and raised a €60M Series B in 2022.
+Agryco — trading as Agriconomie until its September 2024 rebrand — is a French online marketplace and e-commerce platform that sells agricultural supplies direct to farmers: mineral, organic and foliar fertilizers, conventional and organic seeds, phytosanitary products, animal nutrition and livestock equipment, plus tractor, spraying, harvesting and soil-working spare parts. Founded in 2014 by Clement Le Fournis, Dinh Nguyen and Paolin Pascot, the company operates a one-stop procurement site for professional farmers across France, Belgium, Germany, Spain and Italy, wrapping the catalog in advisory services (agronomy experts on the phone six days a week), fertilizer blending, equipment valuation and 60-day payment terms. It raised a EUR 60 million Series B in 2022 co-led by Treis Group, Temasek and Aliment Capital with Eurazeo participating, and publishes the Agrycomag technical magazine at agryco.com/blog. Agryco is an end-user commerce product: as of this profile it publishes no public developer program, API reference, SDK or machine-readable specification.
 
-## API surface
+**Areas:** Agriculture · AgTech · E-Commerce · Marketplace · Farm Supplies · Agricultural Inputs · Retail · France · Europe · Company
 
-**None found.** Agryco is an end-user commerce product with no public developer program.
-A full contract-discovery pass on 2026-08-06 came back empty:
+## Agryco on APIs.io
 
-| Probe | Result |
+Everything profiled for Agryco is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/agriconomie/](https://apis.io/providers/agriconomie/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Agriconomie Domain Security](https://apis.io/security/agriconomie/agriconomie-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.agryco.com/)
+- [Support](https://www.agryco.com/contact)
+- [Blog](https://www.agryco.com/blog)
+- [Terms of service](https://www.agryco.com/publi/conditions-generales-vente)
+- [Privacy policy](https://www.agryco.com/publi/politique-de-confidentialite)
+
+## API Evangelist rating
+
+**Kin Score 8.2** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| `https://api.agriconomie.com/openapi.json` (and `/swagger.json`, `/v1/openapi.json`, `/api-docs`, `/docs`) | 404 |
-| `https://api.agriconomie.com/graphql` | 404 |
-| `https://www.agryco.com/openapi.json` | 404 |
-| `https://www.agryco.com/llms.txt` | 404 |
-| `/.well-known/agent-card.json` and `/.well-known/agent.json` (both hosts) | 404 |
-| `/.well-known/security.txt`, `/openid-configuration`, `/oauth-authorization-server`, `/api-catalog`, `/ai-plugin.json` | 404 |
-| `https://www.agryco.com/robots.txt` | 200 — `Disallow: /api` (storefront-internal only) |
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 3.6 |
+| Access clarity | 17.1 |
 
-`api.agriconomie.com` is a live nginx origin (CNAME `admin.agriconomie.com`) but is closed:
-it answers an honest 404 on every anonymous path, so these are real misses rather than an
-SPA catch-all. See `x-coverage` in `apis.yml`.
+**Agent readiness 0.0** — human-only
 
-## Links
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-- Website — https://www.agryco.com/
-- Blog (Agrycomag) — https://www.agryco.com/blog
-- Support — https://www.agryco.com/contact
-- Terms of sale — https://www.agryco.com/publi/conditions-generales-vente
-- Privacy policy — https://www.agryco.com/publi/politique-de-confidentialite
+**Regulatory alignment 9.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/agriconomie/](https://apis.io/providers/agriconomie/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Agryco: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/agriconomie/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
